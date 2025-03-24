@@ -8,6 +8,7 @@ import IconSunHigh from "@/assets/icons/IconSunHigh.svg";
 import IconMenuDeep from "@/assets/icons/IconMenuDeep.svg";
 import LinkButton from "./LinkButton.astro";
 import { SITE } from "@/config";
+import DummyLogo from "@/assets/icons/NHC-Health-Science-picture.svg";
 
 const { pathname } = Astro.url;
 
@@ -37,17 +38,19 @@ const isActive = (path: string) => {
   >
     <div
       id="top-nav-wrap"
-      class="relative flex w-full items-baseline justify-between bg-background p-4 sm:py-6"
+      class="relative flex w-full min-h-[4rem] items-center justify-between bg-background px-4"
     >
       <a
         href="/"
-        class="absolute py-1 text-2xl leading-7 font-semibold whitespace-nowrap sm:static"
+        class="flex items-center justify-start py-2 whitespace-nowrap"
       >
-        {SITE.title}
+      <!-- 可使用svg图像替换成为主页图标 -->
+        <!-- {SITE.title} -->
+        <DummyLogo class="h-12 w-auto dark:invert" />
       </a>
       <nav
         id="nav-menu"
-        class="flex w-full flex-col items-center sm:ml-2 sm:flex-row sm:justify-end sm:space-x-4 sm:py-0"
+        class="flex w-full flex-col items-center sm:ml-2 sm:flex-row sm:justify-end sm:space-x-4"
       >
         <button
           id="menu-btn"
@@ -103,20 +106,24 @@ const isActive = (path: string) => {
               </li>
             )
           }
-          <li class="col-span-1 flex items-center justify-center">
-            <LinkButton
-              href="/search"
-              class:list={[
-                "focus-outline flex p-3 sm:p-1",
-                { "[&>svg]:stroke-accent": isActive("/search") },
-              ]}
-              ariaLabel="search"
-              title="Search"
-            >
-              <IconSearch />
-              <span class="sr-only">Search</span>
-            </LinkButton>
-          </li>
+          {
+            SITE.showSearch && (
+              <li class="col-span-1 flex items-center justify-center">
+                <LinkButton
+                  href="/search"
+                  class:list={[
+                    "focus-outline flex p-3 sm:p-1",
+                    { "[&>svg]:stroke-accent": isActive("/search") },
+                  ]}
+                  ariaLabel="search"
+                  title="Search"
+                >
+                  <IconSearch />
+                    <span class="sr-only">Search</span>
+                </LinkButton>
+              </li>
+            )
+          }
           {
             SITE.lightAndDarkMode && (
               <li class="col-span-1 flex items-center justify-center">

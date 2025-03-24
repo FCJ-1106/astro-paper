@@ -12,34 +12,34 @@ export const LOCALE = {
   lang: "en", // html lang code. Set this empty and default will be "en"
   langTag: ["en-EN"], // BCP 47 Language Tags. Set this empty [] to use the environment default
 } as const;
-
+// 网站的社交链接
 export const SOCIALS = [
-  {
-    name: "Github",
-    href: "https://github.com/satnaing/astro-paper",
-    linkTitle: ` ${SITE.title} on Github`,
-    icon: IconGitHub,
-  },
+  // {
+  //   name: "Github",
+  //   href: "https://github.com/satnaing/astro-paper",
+  //   linkTitle: ` ${SITE.title} on Github`,
+  //   icon: IconGitHub,
+  // },
   {
     name: "X",
-    href: "https://x.com/username",
+    href: "https://x.com/Roger_KFC",
     linkTitle: `${SITE.title} on X`,
     icon: IconBrandX,
   },
-  {
-    name: "LinkedIn",
-    href: "https://www.linkedin.com/in/username/",
-    linkTitle: `${SITE.title} on LinkedIn`,
-    icon: IconLinkedin,
-  },
+  // {
+  //   name: "LinkedIn",
+  //   href: "https://www.linkedin.com/in/username/",
+  //   linkTitle: `${SITE.title} on LinkedIn`,
+  //   icon: IconLinkedin,
+  // },
   {
     name: "Mail",
-    href: "mailto:yourmail@gmail.com",
+    href: "mailto:fcj1106@gmail.com",
     linkTitle: `Send an email to ${SITE.title}`,
     icon: IconMail,
   },
 ] as const;
-
+// 文章的分享链接
 export const SHARE_LINKS = [
   {
     name: "WhatsApp",

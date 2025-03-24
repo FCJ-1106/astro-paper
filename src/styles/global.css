@@ -2,16 +2,23 @@
 @import "./typography.css";
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
-
+/* 浅色方案 */
 :root,
 html[data-theme="light"] {
+  --background: #f2f5ec;
+  --foreground: #353538;
+  --accent: #1158d1;
+  --muted: #bbc789;
+  --border: #7cadff;
+}
+/* html[data-theme="light"] {
   --background: #fdfdfd;
   --foreground: #282728;
   --accent: #006cac;
   --muted: #e6e6e6;
   --border: #ece9e9;
-}
-
+} */
+/* 深色方案 */
 html[data-theme="dark"] {
   --background: #212737;
   --foreground: #eaedf3;
