@@ -18,5 +18,5 @@ export const SITE = {
     text: "Suggest Changes",  // 编辑文章的链接文本
     url: "https://github.com/satnaing/astro-paper/edit/main/",
   },
-  dynamicOgImage: true, // 是否启用动态OG图像，文章多了会变得很慢一张图片大概1秒，慎用！
+  dynamicOgImage: true, // 是否启用动态OG图像，文章多了会变得很慢一张图片大概1秒，慎用
 } as const;
