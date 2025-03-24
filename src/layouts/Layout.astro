@@ -136,6 +136,17 @@ const structuredData = {
   </head>
   <body>
     <slot />
+
+     <!-- Google tag (gtag.js) -->
+    <div style="display: none;">
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9CHLT6071"></script>
+        <script define:vars={{ GA_ID: import.meta.env.PUBLIC_GA_ID }}>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', GA_ID);
+      </script>
+    </div>
   </body>
 </html>
 
