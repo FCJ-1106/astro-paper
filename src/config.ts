@@ -14,9 +14,9 @@ export const SITE = {
   showSearch: false, // 是否展示搜索框
   showBackButton: true, // 是否在每个博客文章中显示Go back按钮
   editPost: {
-    url: "https://github.com/satnaing/astro-paper/edit/main/src/content/blog",  // 编辑文章的链接，当前不可用
+    enabled: false, // 是否启用编辑文章的链接
     text: "Suggest Changes",  // 编辑文章的链接文本
-    appendFilePath: true, // 是否在编辑链接中附加文件路径
+    url: "https://github.com/satnaing/astro-paper/edit/main/",
   },
   dynamicOgImage: true, // 是否启用动态OG图像，文章多了会变得很慢一张图片大概1秒，慎用！
 } as const;
