@@ -1,6 +1,6 @@
 export const SITE = {
   // 网站主要配置
-  website: "https://astro-paper.pages.dev/", // 开发模式下不填，生产模式下替换真实网址 https://nhchealthscience.com/
+  website: "https://nhchealthscience.com/", // 开发模式下不填，生产模式下替换真实网址 https://nhchealthscience.com/
   author: "Roger",
   profile: "", // 个人作品集或网站，没有就不填
   desc: "Explore NHC Health Science for fun, popular science articles on health. Enjoy humorous tips that make learning about health easy for everyone!", // 网站描述
